@@ -68,7 +68,7 @@ int main()
     }
 
 
-    delete [ ] p; //whenever you use dinamic allocated memory, you need to realize it
+    delete [ ] p; //whenever you use dinamic allocated memory, you need to realese it
     //free(p);*/
 
     int *p1;

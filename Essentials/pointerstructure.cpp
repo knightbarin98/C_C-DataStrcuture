@@ -35,6 +35,7 @@ int main()
     //with C
     //p=(struct Rectangle *)malloc(sizeof(struct Rectangle));
     //with C++
+    
     p = new Rectangle;
 
     p->length = 15;
