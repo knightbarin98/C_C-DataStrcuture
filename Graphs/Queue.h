@@ -11,26 +11,17 @@ struct Node
     struct Node *next;
 }*front=NULL, *rear=NULL;
 
-void *malloc_safe(size_t size)
-{
-    void* ptr = malloc(size);
-    if(ptr == NULL)
-        return malloc_safe(size); 
-    else
-        return ptr;
-}
-
 void enqueue(int x)
 {
     struct Node *t;
-    t = (struct Node *) malloc_safe(sizeof(struct Node));
+    t = (struct Node *) malloc(sizeof(struct Node));
     if(t == NULL)
     {
         printf("Queue is FULL\n");
     }
     else
     {
-        t->data - x;
+        t->data = x;
         t->next = NULL;
         if(front == NULL)
             front=rear=t;
